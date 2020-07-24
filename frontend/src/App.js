@@ -48,7 +48,7 @@ class ProfileView extends React.Component {
       <Jumbotron className="mt-4 p-0 pt-4 text-white">
         <Row>
           <Col xs={5}>
-            <Image src="img/ProfileT.png" className="border-0" fluid rounded/>
+            <Image src={require('./img/profileT.png')} className="border-0" fluid rounded/>
           </Col>
           <Col>
           <h1>Dylan Dunn</h1>
