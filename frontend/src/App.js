@@ -8,7 +8,10 @@ import {
   Image,
   Row,
   Col,
-  Jumbotron
+  Jumbotron,
+  Carousel,
+  CardColumns,
+  Card
 } from "react-bootstrap"
 
 function App() {
@@ -37,6 +40,9 @@ function App() {
       </nav>
       <ProfileView/>
       <PictureView/>
+      <Col className="col-12 text-center">
+        <small className="col-12"> Copyright &copy; 2019 Dylan Dunn. All Rights Reserved</small>
+      </Col>
       </Container>
     </Router>
   );
@@ -51,8 +57,32 @@ class ProfileView extends React.Component {
             <Image src={require('./img/profileT.png')} className="border-0" fluid rounded/>
           </Col>
           <Col>
-          <h1>Dylan Dunn</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <Row>
+              <Col>
+              <h1>Dylan Dunn</h1>
+              <p>Jack of all trades. Master Of None</p>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <Carousel className="mr-4 ml-0 pl-0">
+                  <Carousel.Item>
+                  <Image className="d-block w-100" src='https://article.images.consumerreports.org/f_auto/prod/content/dam/CRO-Images-2020/Magazine/05May/CR-Health-Inlinehero-HealthyFastFood-3-20-v2' alt="Third slide"/>
+                    <Carousel.Caption>
+                      <h3>First slide label</h3>
+                      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    </Carousel.Caption>
+                  </Carousel.Item>
+                  <Carousel.Item>
+                  <Image className="d-block w-100" src='https://article.images.consumerreports.org/f_auto/prod/content/dam/CRO-Images-2020/Magazine/05May/CR-Health-Inlinehero-HealthyFastFood-3-20-v2' alt="Third slide"/>
+                    <Carousel.Caption>
+                      <h3>Second slide label</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </Carousel.Caption>
+                  </Carousel.Item>
+                </Carousel>
+              </Col>
+            </Row>
           </Col>
         </Row>
       </Jumbotron>
@@ -64,10 +94,26 @@ class ProfileView extends React.Component {
 class PictureView extends React.Component {
   render() {
     return (
-      <Row>
-        <Col>
-        </Col>
-      </Row>
+      <CardColumns>
+          <Card>
+              <Card.Img src={require('./img/paella.jpg')}/>
+          </Card>
+          <Card>
+              <Card.Img src={require('./img/bak.jpg')}/>
+          </Card>
+          <Card>
+              <Card.Img src={require('./img/span.jpg')}/>
+          </Card>
+          <Card>
+              <Card.Img src={require('./img/pork.jpg')}/>
+          </Card>
+          <Card>
+              <Card.Img src={require('./img/crepe.jpg')}/>
+          </Card>
+          <Card>
+              <Card.Img src={require('./img/gai.jpg')}/>
+          </Card>
+      </CardColumns>
     )
   }
 }
