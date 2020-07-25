@@ -2,8 +2,16 @@
     background-color: #515751 !important;
 }
 
-.light-color {
+.light-color, .card{
     background-color: #EEFFDB !important;
+}
+
+.card {
+    border: none !important;
+}
+
+.list-group, .list-group-flush, .list-group-item {
+    background-color: #515751 !important;
 }
 
 .gallery-color {
