@@ -1,13 +1,25 @@
-.jumbotron {
+.dark-color {
     background-color: #515751 !important;
 }
 
+.light-color {
+    background-color: #EEFFDB !important;
+}
+
+.gallery-color {
+    background-color: #B8D4E3 !important;
+}
+
 body {
-    background-color: #F5F9E9 !important;
+    background: #D64933 !important;
+    padding: 0px;
+    
 }
 
 html {
     height: 100%;
+    padding: 0px;
 }
+
 
 /* https://coolors.co/dff3e4-ee92c2-5d675b-445552-3e4cdc */
