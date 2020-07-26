@@ -19,7 +19,8 @@ import {
   CardColumns,
   ButtonToolbar,
   ButtonGroup,
-  Form
+  Form,
+  NavDropdown
 } from "react-bootstrap";
 
 function App() {
@@ -37,6 +38,15 @@ function App() {
         <Route exact path="/login">
           <LoginView />
         </Route>
+        <Route exact path="/wingchat">
+          <WingChatView />
+        </Route>
+        <Route exact path="/wingstat">
+          <WingStatView />
+        </Route>
+        <Route exact path="/contest">
+          <ContestView />
+        </Route>
       </Switch>
       <Col className="col-12 text-center mt-4">
           <small className="col-12"> Copyright &copy; 2019 Dylan Dunn. All Rights Reserved</small>
@@ -44,6 +54,60 @@ function App() {
       </Container>
     </Router>
   );
+}
+
+class WingStatView extends React.Component {
+  render() {
+    return (
+      <Jumbotron className="text-white mt-4 p-0 dark-color mb-0">
+        <Row className="m-0 p-0">
+          <Col>
+          </Col>
+          <Col className="light-color text-dark">
+            <h1 className="display-4"> WingStat </h1>
+            <p className="lead"> Statistics For The Fellas</p>
+          </Col>
+        </Row>
+      </Jumbotron>
+    )
+  }
+}
+
+class WingChatView extends React.Component {
+  render() {
+    return (
+      <Jumbotron className="text-white mt-4 p-0 dark-color mb-0">
+        <Row className="m-0 p-0">
+          <Col>
+          </Col>
+          <Col className="light-color text-dark">
+            <h1 className="display-4"> WingChat </h1>
+            <p className="lead"> A Messenger For The Fellas</p>
+            <Row className="ml-0 mb-4">
+              <a href="https://apps.apple.com/us/app/apple-store/id375380948?mt=8" className="apple"></a>
+            </Row>
+          </Col>
+        </Row>
+      </Jumbotron>
+    )
+  }
+}
+
+class ContestView extends React.Component {
+  render() {
+    return (
+      <Jumbotron className="text-white mt-4 p-0 dark-color mb-0">
+        <Row className="m-0 p-0">
+          <Col>
+          </Col>
+          <Col className="light-color text-dark">
+            <h1 className="display-4"> Contest </h1>
+            <p className="lead"> Money For Whatever </p>
+          </Col>
+        </Row>
+      </Jumbotron>
+    )
+  }
 }
 
 class NavbarView extends React.Component {
@@ -60,6 +124,13 @@ class NavbarView extends React.Component {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link href="/blog">Blog</Nav.Link>
+            <NavDropdown title="Contests" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/contest"> Current Contest </NavDropdown.Item>
+            </NavDropdown>
+            <NavDropdown title="Fellas" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/wingchat"> WingChat </NavDropdown.Item>
+              <NavDropdown.Item href="/wingstat"> WingStat </NavDropdown.Item>
+            </NavDropdown>
           </Nav>
           <Button href="/login" variant="outline-secondary text-white">Login</Button>
         </Navbar.Collapse>
@@ -167,7 +238,7 @@ class BlogView extends React.Component {
                 <Card.Body>
                   <Card.Title className="text-dark"> Example Article </Card.Title>
                   <Card.Text className="text-dark"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </Card.Text>
-                  <Button variant="primary">Read</Button>
+                  <Button variant="dark">Read</Button>
                 </Card.Body>
             </Card>
             <Card>
@@ -175,7 +246,7 @@ class BlogView extends React.Component {
                 <Card.Body>
                   <Card.Title className="text-dark"> Example Video </Card.Title>
                   <Card.Text className="text-dark"> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </Card.Text>
-                  <Button variant="primary">Watch</Button>
+                  <Button variant="dark">Watch</Button>
                 </Card.Body>
             </Card>
         </CardColumns>

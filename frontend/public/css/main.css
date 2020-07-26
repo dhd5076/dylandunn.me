@@ -10,6 +10,14 @@
     border: none !important;
 }
 
+.apple {
+    display:inline-block;
+    overflow:hidden;
+    background:url(https://linkmaker.itunes.apple.com/en-us/badge-lrg.svg?releaseDate=2010-06-15&kind=iossoftware&bubble=ios_apps) no-repeat;
+    width:135px;
+    height:40px;
+}
+
 .list-group, .list-group-flush, .list-group-item {
     background-color: #515751 !important;
 }
