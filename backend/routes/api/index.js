@@ -1,8 +1,9 @@
 var express = require('express');
-var apiRouter = require('./api');
 var router = express.Router();
 
 /* GET home page. */
-router.use('/api', apiRouter);
+router.use('/ping', function(req, res) {
+    res.send('pong');
+});
 
 module.exports = router;

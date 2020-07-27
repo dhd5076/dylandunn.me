@@ -84,7 +84,8 @@ class WingChatView extends React.Component {
             <h1 className="display-4"> WingChat </h1>
             <p className="lead"> A Messenger For The Fellas</p>
             <Row className="ml-0 mb-4">
-              <a href="https://apps.apple.com/us/app/apple-store/id375380948?mt=8" className="apple"></a>
+              {/*eslint-disable-next-line*/}
+              <a href="https://apps.apple.com/us/app/apple-store/id375380948?mt=8" className="apple"/>
             </Row>
           </Col>
         </Row>
@@ -216,7 +217,7 @@ class BlogView extends React.Component {
         <Jumbotron className="text-white mt-4 p-0 dark-color mb-0">
           <Row className="m-0 p-0">
             <Col xs={12} md={6} className="m-0 p-0">
-              <Image src={require('./img/paella.jpg')} fluid/>
+              <Image src='./img/paella.jpg' fluid/>
             </Col>
             <Col className="col-md-6 col-xs-12 light-color text-dark">
                 <h1 className="display-4"> Blog </h1>
@@ -228,7 +229,7 @@ class BlogView extends React.Component {
         <Row className="no-gutters pt-4">
         <CardColumns>
             <Card>
-                <Card.Img variant="top" src={require('./img/bak.jpg')}/>
+                <Card.Img variant="top" src='./img/bak.jpg'/>
                 <Card.Body>
                   <Card.Title className="text-dark"> Example Picture </Card.Title>
                   <Card.Text className="text-dark"> Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. </Card.Text>
@@ -242,7 +243,7 @@ class BlogView extends React.Component {
                 </Card.Body>
             </Card>
             <Card>
-                <Card.Img variant="top" src={require('./img/test.jpg')}/>
+                <Card.Img variant="top" src='./img/test.jpg'/>
                 <Card.Body>
                   <Card.Title className="text-dark"> Example Video </Card.Title>
                   <Card.Text className="text-dark"> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </Card.Text>
@@ -272,7 +273,7 @@ class ProfileView extends React.Component {
       <Jumbotron className="text-white mt-4 p-0 dark-color mb-0">
         <Row className="m-0 p-0">
           <Col xs={12} md={6} className="m-0 p-0">
-            <Image src={require('./img/Head.png')} fluid/>
+            <Image src='./img/Head.png' fluid/>
           </Col>
           <Col className="col-md-6 col-xs-12 light-color text-dark">
               <h1 className="display-4"> Dylan Dunn </h1>
