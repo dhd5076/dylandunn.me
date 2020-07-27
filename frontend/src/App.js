@@ -159,7 +159,7 @@ class LoginView extends React.Component {
                 </Row>
                 <Row className="mt-4 pl-3 col-4">
                   <select name="gender" className="form-control">
-                    <option selected>Gender</option>
+                    <option defaultValue>Gender</option>
                     <option>Male</option>
                     <option>Female</option>
                     <option>Other</option>
@@ -194,7 +194,7 @@ class LoginView extends React.Component {
                   </Col>
                 </Row>
                 <Row className="ml-0 mt-4">
-                  <Link>Forgot Password?</Link>
+                  <Link to="/forgotPassword" >Forgot Password?</Link>
                 </Row>
                 <Row className="mt-4 mr-0 pull-right mb-3">
                   <Button variant="dark" size="lg"> Login </Button>
