@@ -40,12 +40,14 @@ router.get('/:id', (req, res) => {
 
 // POST /user
 router.post('/', (req, res) => {
-    userController.create(req.body.username, req.body.firstname, req.body.lastname, req.body.password)
+    userController.create(req.body.firstname, req.body.lastname, req.body.gender, req.body.email, req.body.password)
     .then((users) => {
+        console.log(req.body + "asdasdasd");
         res.send(response.generate(users, null));
         logger.info('User', "Created New User: " + req.body.firstname + " " + req.body.lastname)
     })
     .catch((error) => {
+        console.log(JSON.stringify(req.body));
         res.send(response.generate(null, error.message));
     })
 });

@@ -1,36 +1,26 @@
-/**
- * @file User Controller
- */
-
 var User = require('../models/User');
 var randomstring = require('randomstring');
 const mongoose = require('mongoose');
 var response = require('../utils/response');
 
-/**
- * Authenticates a user
- * @param {String} username User Username
- * @param {String} password User Password
- * @returns {User} The Authenticated User Object
- */
-exports.auth = function(username, password) {
+exports.auth = function(email, password) {
     return new Promise((resolve, reject) => {
-        User.findOne({username : username})
+        User.findOne({email : email})
         .then((user) => {
             if(user) {
                 user.comparePassword(password)
                 .then((isMatch) => {
-                    if(isMatch) {
+                    if(isMatch) {  
                         resolve(user);
                     } else {
-                        reject(new Error("Incorrect Username Or Password"));
+                        reject(new Error("Incorrect Email Or Password"));
                     }
                 })
                 .catch((error) => {
                     reject(error);
                 })
             } else {
-                reject(new Error("Incorrect Username Or Password"));
+                reject(new Error("Incorrect Email Or Password"));
             }
         })
         .catch((error) => {
@@ -40,20 +30,13 @@ exports.auth = function(username, password) {
     });
 }
 
-/**
- * Create a new user
- * @param {String} username The username of the user
- * @param {String} firstname The firstname of the user
- * @param {String} lastname The lastname of the user
- * @param {String} password The password of the user
- * @returns {String} The id of the user created
- */
-exports.create = function(username, firstname, lastname, password) {
+exports.create = function(firstname, lastname, gender, email, password) {
     return new Promise((resolve, reject) => {
         var user = new User({
-            username: username,
             firstname: firstname,
             lastname: lastname,
+            gender: gender,
+            email: email,
             password: password,
             api_key: randomstring.generate(32)
         });
@@ -67,10 +50,6 @@ exports.create = function(username, firstname, lastname, password) {
     });
 }
 
-/**
- * Get all users
- * @returns {User[]} All Users
- */
 exports.getAll = function() {
     return new Promise((resolve, reject) => {
         User.find({}, function(err, users) {
@@ -83,11 +62,6 @@ exports.getAll = function() {
     });
 }
 
-/** 
- * Get a user
- * @param {String} id
- * @returns {User} The user with that id
- */
 exports.get = function(id) {
     return new Promise((resolve, reject) => {
         User.findOne({ _id :  id })
@@ -100,10 +74,6 @@ exports.get = function(id) {
     });
 }
 
-/**
- * Delete a user
- * @param {String} id The username of the user to delete
- */
 exports.delete = function(id) {
     return new Promise((resolve, reject) => {
         User.deleteOne({ _id: id })
@@ -116,9 +86,6 @@ exports.delete = function(id) {
     });
 }
 
-/**
- * Delete all users
- */
 exports.deleteAll = function() {
     return new Promise((resolve, reject) => {
         User.deleteMany({})

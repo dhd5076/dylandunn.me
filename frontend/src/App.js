@@ -47,6 +47,9 @@ function App() {
         <Route exact path="/contest">
           <ContestView />
         </Route>
+        <Route exact path="/karen">
+          <KarenView />
+        </Route>
       </Switch>
       <Col className="col-12 text-center mt-4">
           <small className="col-12"> Copyright &copy; 2019 Dylan Dunn. All Rights Reserved</small>
@@ -111,6 +114,23 @@ class ContestView extends React.Component {
   }
 }
 
+class KarenView extends React.Component {
+  render() {
+    return(
+      <Jumbotron className="text-white mt-4 p-0 dark-color mb-0">
+        <Row className="m-0 p-0">
+          <Col>
+          </Col>
+          <Col className="light-color text-dark">
+            <h1 className="display-4"> Karen </h1>
+            <p className="lead"> Life Automation API </p>
+          </Col>
+        </Row>
+      </Jumbotron>
+    )
+  }
+}
+
 class NavbarView extends React.Component {
   constructor(props) {
     super(props);
@@ -125,12 +145,17 @@ class NavbarView extends React.Component {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link href="/blog">Blog</Nav.Link>
-            <NavDropdown title="Contests" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/contest"> Current Contest </NavDropdown.Item>
-            </NavDropdown>
-            <NavDropdown title="Fellas" id="basic-nav-dropdown">
+            <Nav.Link href="/photos">Photos</Nav.Link>
+            <Nav.Link href="/videos">Videos</Nav.Link>
+            <Nav.Link href="/podcast">Podcast</Nav.Link>
+            <NavDropdown title="More" variant="dark" id="basic-nav-dropdown">
+              <NavDropdown.Header>Wings For The Fellas</NavDropdown.Header>
               <NavDropdown.Item href="/wingchat"> WingChat </NavDropdown.Item>
               <NavDropdown.Item href="/wingstat"> WingStat </NavDropdown.Item>
+              <NavDropdown.Header>Giveaways</NavDropdown.Header>
+              <NavDropdown.Item href="/contest"> Current Contest </NavDropdown.Item>
+              <NavDropdown.Header>Karen</NavDropdown.Header>
+              <NavDropdown.Item href="/karen"> Karen </NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Button href="/login" variant="outline-secondary text-white">Login</Button>

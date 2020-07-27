@@ -3,7 +3,9 @@ var path = require('path');
 var mongoose = require('mongoose');
 var cookieParser = require('cookie-parser');
 var colors = require('colors');
+var session = require('express-session');
 var logger = require('./utils/logger');
+var auth = require('./middleware/auth');
 
 var indexRouter = require('./routes/');
 
@@ -20,7 +22,15 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(auth);
+
 app.use('/', indexRouter);
+
+app.use(session({
+  secret: 'wingwingwing',
+  resave: true,
+  saveUninitialized: true
+}));
 
 console.log('\033[2J');
 var nameplate = '  _  __    \n' +
