@@ -4,9 +4,10 @@ var mongoose = require('mongoose');
 var cookieParser = require('cookie-parser');
 var colors = require('colors');
 var session = require('express-session');
+var bodyParser = require('body-parser');
 var logger = require('./utils/logger');
 var auth = require('./middleware/auth');
-
+var discordController = require('./controllers/discordController');
 var indexRouter = require('./routes/');
 
 var app = express();
@@ -17,20 +18,20 @@ app.set('view engine', 'jade');
 
 app.disable('etag');
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
-app.use(auth);
-
-app.use('/', indexRouter);
 
 app.use(session({
   secret: 'wingwingwing',
   resave: true,
   saveUninitialized: true
 }));
+
+app.use(auth);
+
+app.use('/', indexRouter);
 
 console.log('\033[2J');
 var nameplate = '  _  __    \n' +
@@ -41,12 +42,14 @@ var nameplate = '  _  __    \n' +
 
 console.log(colors.green(nameplate));
 
-mongoose.connect('mongodb://localhost/dashboard', {useNewUrlParser: true, useUnifiedTopology: true }, function(err) {
+mongoose.connect('mongodb://localhost/dingdong', {useNewUrlParser: true, useUnifiedTopology: true }, function(err) {
     if(!err) {
         logger.log('MongoDB', "Connected To MongoDB Database");
     } else {
         logger.error('MongoDB', 'Failed To Establish A Connection To MongoDB.');
     }
 });
+
+discordController.start();
 
 module.exports = app;

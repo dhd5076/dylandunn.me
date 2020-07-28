@@ -1,7 +1,5 @@
 var User = require('../models/User');
 var randomstring = require('randomstring');
-const mongoose = require('mongoose');
-var response = require('../utils/response');
 
 exports.auth = function(email, password) {
     return new Promise((resolve, reject) => {
@@ -24,7 +22,6 @@ exports.auth = function(email, password) {
             }
         })
         .catch((error) => {
-            console.log(error);
             reject(error);
         });
     });

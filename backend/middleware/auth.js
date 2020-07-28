@@ -1,10 +1,9 @@
 var User = require('../models/User');
 var response = require('../utils/response');
 
-var DEBUG = true;
+var DEBUG = false;
 
 module.exports = function(req, res, next) {
-    console.log(req);
     if(DEBUG) {
         req.isAuthenticated = true;
         next();
@@ -25,7 +24,9 @@ module.exports = function(req, res, next) {
             res.send(response.generate(null, error.message));
         })
     } else {
-        req.isAuthenticated = req.session.hasOwnProperty('user');
+        if(req.session.user) {
+            req.isAuthenticated = true;
+        }
         next();
     }
 }
