@@ -19,11 +19,27 @@ class LoginView extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {loginEmail: '', loginPassword: '', isLoggedin: false, alertContent: ''};
+        this.state = {
+            loginEmail: '',
+            loginPassword: '',
+            createEmail: '',
+            createPassword: '',
+            createFirstName: '',
+            createLastName: '',
+            isLoggedin: false,
+            alertContent: '',
+            creationSuccess: false
+        };
 
         this.handleLoginEmailChange = this.handleLoginEmailChange.bind(this);
         this.handleLoginPasswordChange = this.handleLoginPasswordChange.bind(this);
         this.handleLoginFormSubmit = this.handleLoginFormSubmit.bind(this);
+
+        this.handleCreateFirstNameChange = this.handleCreateFirstNameChange.bind(this);
+        this.handleCreateLastNameChange = this.handleCreateLastNameChange.bind(this);
+        this.handleCreateEmailChange = this.handleCreateEmailChange.bind(this);
+        this.handleCreatePasswordChange = this.handleCreatePasswordChange.bind(this);
+        this.handleCreateFormSubmit = this.handleCreateFormSubmit.bind(this);
     }
 
     componentDidMount() {
@@ -42,6 +58,23 @@ class LoginView extends React.Component {
 
     handleLoginPasswordChange(event) {
         this.setState({loginPassword: event.target.value});
+    }
+
+    handleCreateEmailChange(event) {
+        this.setState({createEmail: event.target.value});
+    }
+
+    handleCreatePasswordChange(event) {
+        console.log("asdasdasd");
+        this.setState({createPassword: event.target.value});
+    }
+
+    handleCreateFirstNameChange(event) {
+        this.setState({createFirstName: event.target.value});
+    }
+
+    handleCreateLastNameChange(event) {
+        this.setState({createLastName: event.target.value});
     }
 
     handleLoginFormSubmit(event) {
@@ -64,6 +97,31 @@ class LoginView extends React.Component {
         event.preventDefault();
     }
 
+    handleCreateFormSubmit(event) {
+        fetch('/api/user', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                firstname: this.state.createFirstName,
+                lastname: this.state.createLastName,
+                email: this.state.createEmail,
+                password: this.state.createPassword
+             })
+        })
+        .then(res => res.json())
+        .then(res => {
+            if(res.error === 'null') {
+                this.setState({
+                    creationSuccess: true,
+                    alertContent: ''
+                })
+            } else {
+                this.setState({alertContent: res.error});
+            }
+        });
+        event.preventDefault();
+    }
+
     render() {
         
         let alert;
@@ -73,41 +131,41 @@ class LoginView extends React.Component {
             alert = <> </>
         }
 
+        let createSuccess;
+        if(this.state.creationSuccess) {
+            createSuccess = <Alert variant="success"> Account Created Successfully! </Alert>
+        } else {
+            createSuccess = <> </>
+        }
+
       return (
         <Jumbotron className="text-white mt-4 p-0 dark-color mb-0">
             {alert}
+            {createSuccess}
             <Row className="m-0 p-0">
                 <Col xs={12} md={6} className="col-md-6 col-xs-12 dark-color text-light">
                     <h1 className="display-4"> Create Account </h1>
-                    <Form className="mb-4">
+                    <Form className="mb-4" onSubmit={this.handleCreateFormSubmit}>
                         <Row className="mt-4">
                         <Col>
-                            <Form.Control name="first-name" type="text" placeholder="First Name"/>
+                            <Form.Control onChange={this.handleCreateFirstNameChange} name="first-name" type="text" placeholder="First Name"/>
                         </Col>
                         <Col>
-                            <Form.Control name="last-name" type="text" placeholder="Last Name"/>
-                        </Col>
-                        </Row>
-                        <Row className="mt-4 pl-3 col-4">
-                        <select name="gender" className="form-control">
-                            <option defaultValue>Gender</option>
-                            <option>Male</option>
-                            <option>Female</option>
-                            <option>Other</option>
-                        </select>
-                        </Row>
-                        <Row className="mt-4">
-                        <Col>
-                            <Form.Control onChange={this.handleLoginEmailChange} type="email " placeholder="Email Address"/>
+                            <Form.Control onChange={this.handleCreateLastNameChange} name="last-name" type="text" placeholder="Last Name"/>
                         </Col>
                         </Row>
                         <Row className="mt-4">
                         <Col>
-                            <Form.Control onChange={this.handleLoginEmailChange} name="password" type="password" placeholder="Password"/>
+                            <Form.Control onChange={this.handleCreateEmailChange} type="email " placeholder="Email Address"/>
+                        </Col>
+                        </Row>
+                        <Row className="mt-4">
+                        <Col>
+                            <Form.Control onChange={this.handleCreatePasswordChange} name="password" type="password" placeholder="Password"/>
                         </Col>
                         </Row>
                         <Row className="mt-4 mr-0 pull-right mb-3">
-                        <Button variant="dark" size="lg"> Create Account </Button>
+                        <Button type="submit" variant="dark" size="lg"> Create Account </Button>
                         </Row>
                     </Form>
                 </Col>

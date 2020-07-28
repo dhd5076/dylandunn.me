@@ -21,10 +21,6 @@ var UserSchema = mongoose.Schema({
         type: String,
         require: [true, 'Email Required']
     },
-    gender: {
-        type: String,
-        require: [true, 'Gender Required']
-    },
     password: {
         type: String,
         required: [true, 'Password Required']

@@ -27,12 +27,11 @@ exports.auth = function(email, password) {
     });
 }
 
-exports.create = function(firstname, lastname, gender, email, password) {
+exports.create = function(firstname, lastname, email, password) {
     return new Promise((resolve, reject) => {
         var user = new User({
             firstname: firstname,
             lastname: lastname,
-            gender: gender,
             email: email,
             password: password,
             api_key: randomstring.generate(32)
