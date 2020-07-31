@@ -49,7 +49,10 @@ class NavbarView extends React.Component {
                             <Button href="/dashboard" className="text-white" variant="outline-secondary"> Account </Button>
                             <Dropdown.Toggle className="text-white" split variant="outline-secondary" id="dropdown-split-basic" />
                             <Dropdown.Menu>
-                                <Dropdown.Item onClick={this.logout} > Logout </Dropdown.Item>
+                                <Dropdown.Item onClick={this.logout} className="d-flex justify-content-between align-items-center" > 
+                                Logout
+                                <i className="fa fa-arrow-right mr-2"/>
+                                 </Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>
                         </>
