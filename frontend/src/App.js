@@ -22,6 +22,7 @@ import KarenView from "./KarenView";
 import NavbarView from "./NavbarView";
 import WingChatView from "./WingChatView";
 import ContestView from "./WingChatView";
+import AdminView from "./AdminView";
 
 function App() {
   return (
@@ -58,6 +59,9 @@ function App() {
         </Route>
         <Route exact path="/dashboard">
           <DashboardView />
+        </Route>
+        <Route exact path="/admin">
+          <AdminView />
         </Route>
       </Switch>
       <Col className="col-12 text-center mt-4">

@@ -20,7 +20,7 @@ class KarenView extends React.Component {
               <h1 className="display-4"> Karen </h1>
               <p className="lead"> Life Automation API </p>
               <Row className="ml-0 p-0">
-                <Button variant="dark" href="/dashboard"> 
+                <Button variant="dark" href="/karen/dashboard"> 
                   <span> Go To Dashboard  </span>
                   <i className="fa fa-arrow-circle-right"/>
                  </Button>

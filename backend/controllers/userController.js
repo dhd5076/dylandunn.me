@@ -33,6 +33,7 @@ exports.create = function(firstname, lastname, email, password) {
             firstname: firstname,
             lastname: lastname,
             email: email,
+            isAdmin: true,
             password: password,
             api_key: randomstring.generate(32)
         });

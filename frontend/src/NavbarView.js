@@ -3,12 +3,9 @@ import {
     Navbar,
     NavDropdown,
     Nav,
-    Image
+    Dropdown,
+    ButtonGroup
 } from "react-bootstrap";
-
-import {
-    Link
-  } from "react-router-dom";
 
 import React from 'react';
 
@@ -48,12 +45,13 @@ class NavbarView extends React.Component {
         let loginButton;
         if(this.state.isLoggedin) {
         loginButton =   <>
-                            <Button onClick={this.logout} variant="outline-secondary mr-4 text-white">
-                                Logout
-                            </Button>
-                            <Link to="/dashboard">
-                                <Image width="48px" src="/img/pork.jpg" fluid roundedCircle/>
-                            </Link>
+                        <Dropdown as={ButtonGroup}>
+                            <Button href="/dashboard" className="text-white" variant="outline-secondary"> Account </Button>
+                            <Dropdown.Toggle className="text-white" split variant="outline-secondary" id="dropdown-split-basic" />
+                            <Dropdown.Menu>
+                                <Dropdown.Item onClick={this.logout} > Logout </Dropdown.Item>
+                            </Dropdown.Menu>
+                        </Dropdown>
                         </>
         } else {
         loginButton = <Button href="/login" variant="outline-secondary text-white">Login</Button>
