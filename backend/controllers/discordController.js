@@ -20,7 +20,7 @@ exports.start = function() {
         if(msg.content.startsWith("!")) {
             switch(msg.content.split(' ')[0]) {
                 case '!ping':
-                    msg.channel.send('Pong!');
+                    msg.channel.send('Pong');
                     break;
                 default:;
             }

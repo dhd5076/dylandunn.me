@@ -8,9 +8,7 @@ import {
 
 import { 
   Container,
-  Row,
   Col,
-  Jumbotron
 } from "react-bootstrap";
 
 import BlogView from "./BlogView";
@@ -22,6 +20,8 @@ import ProfileView from "./ProfileView";
 import DashboardView from "./DashboardView";
 import KarenView from "./KarenView";
 import NavbarView from "./NavbarView";
+import WingChatView from "./WingChatView";
+import ContestView from "./WingChatView";
 
 function App() {
   return (
@@ -66,41 +66,6 @@ function App() {
       </Container>
     </Router>
   );
-}
-
-class WingChatView extends React.Component {
-  render() {
-    return (
-      <Jumbotron className="text-white mt-4 p-0 dark-color mb-0">
-        <Row className="m-0 p-0">
-          <Col>
-          </Col>
-          <Col className="light-color text-dark">
-            <h1 className="display-4"> WingChat </h1>
-            <p className="lead"> A Messenger For The Fellas</p>
-            <p> Coming Soon... </p>
-          </Col>
-        </Row>
-      </Jumbotron>
-    )
-  }
-}
-
-class ContestView extends React.Component {
-  render() {
-    return (
-      <Jumbotron className="text-white mt-4 p-0 dark-color mb-0">
-        <Row className="m-0 p-0">
-          <Col>
-          </Col>
-          <Col className="light-color text-dark">
-            <h1 className="display-4"> Contest </h1>
-            <p className="lead"> Money For Whatever </p>
-          </Col>
-        </Row>
-      </Jumbotron>
-    )
-  }
 }
 
 class HomeView extends React.Component {
