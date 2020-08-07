@@ -36,7 +36,7 @@ class PhotoView extends React.Component {
                         <Button variant="dark">Watch</Button>
                     </Card.Body>
                     <Card.Footer>
-                        <small className="text-muted">Last updated 3 mins ago</small>
+                        <small className="text-muted">Posted 4 Days Ago</small>
                     </Card.Footer>
               </Card>
           </CardColumns>

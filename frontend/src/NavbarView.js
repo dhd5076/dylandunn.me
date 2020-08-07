@@ -69,7 +69,6 @@ class NavbarView extends React.Component {
                 <Nav.Link href="/blog">Blog</Nav.Link>
                 <Nav.Link href="/photos">Photos</Nav.Link>
                 <Nav.Link href="/videos">Videos</Nav.Link>
-                <Nav.Link href="/podcast">Podcast</Nav.Link>
                 <NavDropdown title="More" variant="dark" id="basic-nav-dropdown" className="mb-1">
                     <NavDropdown.Header>Wings For The Fellas</NavDropdown.Header>
                     <NavDropdown.Item href="/wingchat"> WingChat </NavDropdown.Item>

@@ -9,7 +9,7 @@ import React from 'react';
 
 class AdminView extends React.Component {
 
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
         fetch('/api/auth', {
             method: 'GET',
             headers: { 'Content-Type': 'application/json' }
