@@ -17,6 +17,7 @@ exports.start = function() {
     });
 
     bot.on('message', msg => {
+        logger.log('Discord', "Message From " + msg.author + ' : ' + msg.content)
         if(msg.content.startsWith("!")) {
             switch(msg.content.split(' ')[0]) {
                 case '!ping':

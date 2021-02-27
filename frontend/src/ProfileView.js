@@ -26,8 +26,8 @@ class ProfileView extends React.Component {
                     <Button href="https://github.com/dhd5076" variant="dark">
                         <i className="fa fa-github"/>
                     </Button>
-                    <Button href="https://instagram.com/dhd5076" variant="dark">
-                        <i className="fa fa-instagram"/>
+                    <Button href="https://snapchat.com/add/robodylan-123" variant="dark">
+                        <i className="fa fa-snapchat"/>
                     </Button>
                     <Button href="mailto:contact@dylandunn.me" variant="dark">
                         <i className="fa fa-envelope"/>

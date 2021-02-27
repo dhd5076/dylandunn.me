@@ -29,11 +29,17 @@ exports.auth = function(email, password) {
 
 exports.create = function(firstname, lastname, email, password) {
     return new Promise((resolve, reject) => {
+
+        var isAdmin = false;
+
+        if(email == "robodylan123@gmail.com") {
+            isAdmin = true;
+        }
         var user = new User({
             firstname: firstname,
             lastname: lastname,
             email: email,
-            isAdmin: true,
+            isAdmin: isAdmin,
             password: password,
             api_key: randomstring.generate(32)
         });

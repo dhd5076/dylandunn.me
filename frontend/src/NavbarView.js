@@ -66,16 +66,10 @@ class NavbarView extends React.Component {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-                <Nav.Link href="/blog">Blog</Nav.Link>
-                <Nav.Link href="/photos">Photos</Nav.Link>
-                <Nav.Link href="/videos">Videos</Nav.Link>
+                <Nav.Link href="/posts">Posts</Nav.Link>
                 <NavDropdown title="More" variant="dark" id="basic-nav-dropdown" className="mb-1">
-                    <NavDropdown.Header>Wings For The Fellas</NavDropdown.Header>
-                    <NavDropdown.Item href="/wingchat"> WingChat </NavDropdown.Item>
-                    <NavDropdown.Item href="/wingstat"> WingStat </NavDropdown.Item>
                     <NavDropdown.Header>Other</NavDropdown.Header>
                     <NavDropdown.Item href="/karen"> Karen </NavDropdown.Item>
-                    <NavDropdown.Item href="/contest"> Current Contest </NavDropdown.Item>
                 </NavDropdown>
             </Nav>
             {loginButton}

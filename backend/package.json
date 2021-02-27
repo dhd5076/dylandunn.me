@@ -14,11 +14,13 @@
     "discord.js": "^12.2.0",
     "dotenv": "^8.2.0",
     "express": "~4.16.1",
+    "express-fileupload": "^1.2.1",
     "express-session": "^1.17.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
     "mongoose": "^5.9.25",
     "morgan": "~1.9.1",
-    "randomstring": "^1.1.5"
+    "randomstring": "^1.1.5",
+    "socks-proxy-agent": "^5.0.0"
   }
 }

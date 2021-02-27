@@ -11,19 +11,13 @@ import {
   Col,
 } from "react-bootstrap";
 
-import BlogView from "./BlogView";
-import WingStatView from "./WingStatView";
+import BlogView from "./PostView";
 import LoginView from "./LoginView";
-import VideoView from "./VideoView";
-import PhotoView from "./PhotoView";
 import ProfileView from "./ProfileView";
 import DashboardView from "./DashboardView";
 import KarenView from "./KarenView";
 import NavbarView from "./NavbarView";
-import WingChatView from "./WingChatView";
-import ContestView from "./WingChatView";
-import AdminView from "./AdminView";
-import InstacartView from "./InstacartView";
+import NewPostView from "./NewPostView";
 
 function App() {
   return (
@@ -31,41 +25,23 @@ function App() {
       <Container className="p-2">
         <NavbarView loggedIn={false} />
       <Switch>
+        <Route exact path="/post/create">
+          <NewPostView />
+        </Route>
         <Route exact path="/">
           <HomeView />
         </Route>
-        <Route exact path="/blog">
+        <Route exact path="/posts">
           <BlogView />
         </Route>
         <Route exact path="/login">
           <LoginView />
         </Route>
-        <Route exact path="/wingchat">
-          <WingChatView />
-        </Route>
-        <Route exact path="/wingstat">
-          <WingStatView />
-        </Route>
-        <Route exact path="/contest">
-          <ContestView />
-        </Route>
         <Route exact path="/karen">
           <KarenView />
         </Route>
-        <Route exact path="/videos">
-          <VideoView />
-        </Route>
-        <Route exact path="/photos">
-          <PhotoView />
-        </Route>
         <Route exact path="/dashboard">
           <DashboardView />
-        </Route>
-        <Route exact path="/admin">
-          <AdminView />
-        </Route>
-        <Route exact path="/instacart">
-          <InstacartView />
         </Route>
       </Switch>
       <Col className="col-12 text-center mt-4">
