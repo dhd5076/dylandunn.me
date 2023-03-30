@@ -1,11 +1,12 @@
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Image from "next/image"
 
 export default function Home() {
   return (
     <>
     <div class="sm:flex shadow-lg w-full">
-      <img src="/img/head.png" class="z-1 shadow-lg w-full sm:w-1/3 bg-gradient-to-b from-pink-500 to-indigo-500 object-cover"/>
+      <img src="/img/Head.png" class="z-1 shadow-lg w-full sm:w-1/3 bg-gradient-to-b from-pink-500 to-indigo-500 object-cover"/>
       <div class="flex-grow w-full text-white font-bold text-3xl bg-black/75 mx-auto shadow-lg">
         <div class="lg:flex lg:flex-wrap p-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-purple-500 inner-shadow">
           <h1 className="mr-6"> Coding.</h1>
@@ -37,8 +38,8 @@ export default function Home() {
             <img src="https://picsum.photos/720" class="rounded-t w-full max-h-48 object-cover"></img>
             <h1 class="font-semibold pl-4 pt-4"> Post Title </h1>
             <p class="line-clamp-2 px-4 w-full text-sm"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-            <div>
-            <button class="block mb-4 mr-4 bg-blue-500 px-6 py-1 text-white text-sm rounded ml-auto mt-4 drop-shadow font-semibold"> Go </button>
+            <div >
+              <button class="block mb-4 mr-4 bg-blue-500 px-6 py-1 text-white text-sm rounded ml-auto mt-4 drop-shadow font-semibold"> Go </button>
             </div>
           </div>
         </div>
