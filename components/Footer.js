@@ -1,7 +1,7 @@
 function Footer (props){
     return (
-    <div class="sticky top-[100vh] w-full">
-        <p class="text-center mx-auto p-2 text-white backdrop-blur-xl bg-white/30 shadow-l g"> Copyright &copy; 2023 Dylan Dunn</p>
+    <div class="">
+        <p class="text-center fixed bottom-0 w-full mx-auto p-2 text-white backdrop-blur-xl bg-black/30 shadow-l g"> Copyright &copy; 2023 Dylan Dunn</p>
     </div>
   )
 }
