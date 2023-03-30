@@ -7,7 +7,8 @@ import {
 
 function Header (props){
     return (
-    <nav class="flex items-center sm:justify-between flex-wrap p-4 w-screen sticky shadow-2xl top-0 backdrop-blur-xl bg-black/30 z-50">
+    <>
+    <nav class="flex items-center sm:justify-between flex-wrap p-4 w-screen h-16 fixed shadow-2xl top-0 backdrop-blur-xl bg-black/30 z-50">
         <div class="flex w-full sm:w-auto ml-0 items-center flex-shrink-0 text-white mx-auto justify-between">
             <span class="font-bold text-lg text-white tracking-tight mr-8 ">Dylan Dunn</span>
             <div class="hidden sm:block">
@@ -21,7 +22,9 @@ function Header (props){
             />
             </span>
         </div>
-        </nav>
+    </nav>
+    <div class="h-16"></div>
+    </>
 )}
 
 export default Header

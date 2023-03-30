@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
-      <body class="bg-gradient-to-b from-pink-900 to-orange-500 h-screen bg-fixed">
+      <body class="bg-gradient-to-b from-pink-900 to-orange-500 sm:h-screen bg-fixed">
         <Main />
         <NextScript />
       </body>
