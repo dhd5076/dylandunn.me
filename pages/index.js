@@ -9,9 +9,9 @@ export default function Home() {
         <img src="/img/Head.png" class="z-1 w-full sm:w-1/3 bg-gradient-to from-pink-500 to-indigo-500 object-cover"/>
         <div class="sm:shadow-xl sm:shadow sm:shadow-black flex-grow w-full text-white font-bold text-3xl bg-black/75 mx-auto">
           <div class="lg:flex lg:flex-wrap p-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-purple-500 inner-shadow">
-            <h1 className="mr-6"> Coding.</h1>
-            <h1 className="mr-6"> Cooking.</h1>
-            <h1 className="mr-6"> Creating.</h1>
+            <h1 class="mr-6"> Coding.</h1>
+            <h1 class="mr-6"> Cooking.</h1>
+            <h1 class="mr-6"> Creating.</h1>
           </div>
           <p class="text-sm p-6 pt-0 w-full font-semibold">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.   
@@ -48,13 +48,23 @@ export default function Home() {
       </div>
       <div class="bg-white/75 h-12 backdrop-blur-xl shadow-lg shadow-gray-900/30 -my-2">
       </div>
-      <div class="flex">
-        <div class="text-white text-xs bg-black/75 overflow-hidden sm:w-1/3 p-6">
+      <div class="flex flex-wrap justify-between">
+        <div class="text-white text-xs bg-black/75 overflow-hidden sm:w-1/2 h-1/2 p-6">
           <h1 class="text-2xl font-black mb-4"> About Me</h1>
           <div class="flex flex-wrap sm:flex-none">
             <p class="text-sm font-semibold mr-6 mb-8"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             <img src="https://picsum.photos/seed/22111/1080/640" class="rounded w-full h-1/2"></img>
           </div>
+        </div>
+        <div class="text-black text-xs bg-white/75 overflow-hidden w-full sm:w-1/6 h-1/2 p-6 sm:mr-6 rounded-b shadow-2xl sm:mt-2">
+          <h1 class="text-2xl font-black mb-4"> Contact Me</h1>
+          <form class="w-full">
+            <input class="block w-1/2 mb-2 rounded py-2 px-4 inner-shadow bg-black/75 text-white font-semibold" placeholder="Name"/>
+            <input class="block w-1/2 rounded mb-2 py-2 px-4 inner-shadow bg-black/75 text-white font-semibold" placeholder="Email"/>
+            <textarea class="block w-full rounded mb-1 py-2 px-4 inner-shadow bg-black/75 text-white font-semibold" placeholder="300 Characters"/>
+            <p class="text-right mt-0"> 0/300 Characters</p>
+            <button class="ml-auto block bg-blue-500 px-2 py-1 rounded font-semibold text-white mt-2"> Submit</button>
+          </form>
         </div>
       </div>
     </>
