@@ -3,7 +3,7 @@ import Footer from "./Footer";
 
 export default function Layout({ children }) {
   return (
-    <div class="sm:h-screen">
+    <div class="sm:h-screen mb-8">
       <Header />
       {children}
       <Footer />

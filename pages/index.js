@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <div class="sm:flex w-full">
-        <img src="/img/Head.png" class="z-1 w-full sm:w-1/3 bg-gradient-to from-pink-500 to-indigo-500 object-cover"/>
+        <img src="/img/Head.png" class="z-1 w-full sm:w-1/4 bg-gradient-to from-pink-500 to-indigo-500 object-cover"/>
         <div class="sm:shadow-xl sm:shadow sm:shadow-black flex-grow w-full text-white font-bold text-3xl bg-black/75 mx-auto">
           <div class="lg:flex lg:flex-wrap p-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-purple-500 inner-shadow">
             <h1 class="mr-6"> Coding.</h1>
@@ -16,18 +16,27 @@ export default function Home() {
           <p class="text-sm p-6 pt-0 w-full font-semibold">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.   
           </p>
-          <div class="grid grid-cols-1 md:grid-cols-3 p-6 gap-6"> 
-            <div> 
-              <img src="https://picsum.photos/1080/540" class="rounded"/>
-              <a class="mb-2 block bg-pink-500 px-4 py-2 text-white text-sm rounded ml-auto mt-0 w-full text-center mt-4"> Github </a>
+          <div class="grid grid-cols-1 lg:grid-cols-3 p-4 gap-4"> 
+            <div class="w-1/2 mx-auto sm:w-full bg-white/25 p-2 rounded"> 
+              <img src="https://picsum.photos/1080/540" class="rounded w-full object-cover"/>
+              <a href="https://github.com/dhd5076" class="mb-2 block bg-black/75 px-4 py-2 text-white text-sm rounded ml-auto mt-0 w-full text-center mt-4"> 
+                <span class="mr-2"> Github</span>
+                <FontAwesomeIcon icon={faArrowRight}/>
+               </a>
             </div>
-            <div> 
-              <img src="https://picsum.photos/seed/11/1080/540" class="rounded"/>
-              <a class="mb-2 block bg-blue-500 px-4 py-2 text-white text-sm rounded ml-auto mt-0 w-full text-center mt-4"> Recipes </a>
+            <div class="w-1/2 mx-auto sm:w-full bg-white/25 p-2 rounded"> 
+              <img src="https://picsum.photos/1080/540" class="rounded w-full object-cover"/>
+              <a href="https://github.com/dhd5076" class="mb-2 block bg-orange-500/75 px-4 py-2 text-white text-sm rounded ml-auto mt-0 w-full text-center mt-4"> 
+                <span class="mr-2"> Recipes </span>
+                <FontAwesomeIcon icon={faArrowRight}/>
+               </a>
             </div>
-            <div> 
-              <img src="https://picsum.photos/seed/43/1080/540" class="rounded"/>
-              <a class="mb-2 block bg-purple-500 px-4 py-2 text-white text-sm rounded ml-auto mt-0 w-full text-center mt-4"> Youtube </a>
+            <div class="w-1/2 mx-auto sm:w-full bg-white/25 p-2 rounded"> 
+              <img src="https://picsum.photos/1080/540" class="rounded w-full object-cover"/>
+              <a href="https://github.com/dhd5076" class="mb-2 block bg-red-500/75 px-4 py-2 text-white text-sm rounded ml-auto mt-0 w-full text-center mt-4"> 
+                <span class="mr-2"> Youtube </span>
+                <FontAwesomeIcon icon={faArrowRight}/>
+               </a>
             </div>
           </div>
         </div>
@@ -49,14 +58,14 @@ export default function Home() {
       <div class="bg-white/75 h-12 backdrop-blur-xl shadow-lg shadow-gray-900/30 -my-2">
       </div>
       <div class="flex flex-wrap justify-between">
-        <div class="text-white text-xs bg-black/75 overflow-hidden sm:w-1/2 h-1/2 p-6">
+        <div class="text-white text-xs bg-black/75 overflow-hidden sm:w-1/3 h-1/2 p-6">
           <h1 class="text-2xl font-black mb-4"> About Me</h1>
           <div class="flex flex-wrap sm:flex-none">
             <p class="text-sm font-semibold mr-6 mb-8"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <img src="https://picsum.photos/seed/22111/1080/640" class="rounded w-full h-1/2"></img>
+            <img src="https://picsum.photos/seed/22111/1080/640" class="rounded w-full max-h-96"></img>
           </div>
         </div>
-        <div class="text-black text-xs bg-white/75 overflow-hidden w-full sm:w-1/6 h-1/2 p-6 sm:mr-6 rounded-b shadow-2xl sm:mt-2">
+        <div class="text-black text-xs bg-white/75 overflow-hidden w-full sm:w-1/2 h-1/2 p-6 sm:mr-12 rounded-b shadow-2xl sm:mt-2">
           <h1 class="text-2xl font-black mb-4"> Contact Me</h1>
           <form class="w-full">
             <input class="block w-1/2 mb-2 rounded py-2 px-4 inner-shadow bg-black/75 text-white font-semibold" placeholder="Name"/>
