@@ -31,10 +31,6 @@ function Header (props){
             </span>
         </div>
         <div class="flex">
-            <div class="bg-white/90 rounded mr-8 flex">
-                <input placeholder="Search" class="rounded px-2 py-1 placeholder-gray-500"></input>
-                <button class="block bg-blue-500 py-2 px-2 rounded-r text-sm font-semibold text-white inner-shadow"> Search </button>
-            </div>
             <div class="hidden sm:block bg-gray-500 text-white font-semibold ml-8 text-sm py-2 px-4 rounded mr-2">
                 Login
             </div>
