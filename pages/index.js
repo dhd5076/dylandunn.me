@@ -5,9 +5,9 @@ import Image from "next/image"
 export default function Home() {
   return (
     <>
-      <div className="sm:flex border-b-[16px] mt-16">
+      <div className="sm:flex mt-16">
         <div className=" sm:max-w-sm sm:min-w-16 sm:h-full">
-          <img src="/img/Head.png" className="object-cover sm:h-full"/>
+          <img src="/img/Head.png" className="object-cover sm:h-full bg-gradient-to-bl from-pink-500 to-indigo-500"/>
         </div>
         <div className="text-white font-bold text-3xl bg-black/75">
           <div className="lg:flex lg:flex-wrap p-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-orange-500 inner-shadow">
@@ -18,8 +18,6 @@ export default function Home() {
           <p className="text-sm p-6 pt-0 w-full font-semibold">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.   
           </p>
-          <div className="bg-black/75 backdrop-blur-xl shadow-lg shadow-900/30 flex">
-          </div>
         </div>
       </div>
       <div className="p-6 flex-grow">

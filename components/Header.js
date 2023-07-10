@@ -9,18 +9,15 @@ import {
 function Header (props){
     return (
     <>
-    <nav className="flex items-center sm:justify-between px-6 w-full h-16 fixed shadow-2xl backdrop-blur-xl bg-white/75 z-50 shadow-2xl shadow-black/50">
-        <div className="flex my- 4w-full sm:w-auto ml-0 items-center flex-shrink-0 text-white mx-auto justify-between w-full">
-            <span className="font-black text-xl text-gray-500 tracking-tight mr-8 "><a href="/">Dylan Dunn</a></span>
+    <nav className="flex items-center sm:justify-between px-6 max-w-7xl w-full h-16 fixed shadow-2xl backdrop-blur-xl bg-white/75 z-50 shadow-2xl shadow-black/50">
+        <div className="flex my-4 sm:w-auto ml-0 items-center flex-shrink-0 text-white mx-auto justify-between w-full">
+            <span className="font-black text-2xl text-gray-900 mr-8 "><a href="/">Dylan Dunn</a></span>
             <div className="hidden sm:block text-black/90">
-                <a href="/" className="text-sm font-semibold mr-2 font-semibold rounded shadow-inner bg-white/75 py-2 px-4"> 
+                <a href="/" className="text-sm font-semibold mr-2 font-semibold rounded shadow-inner text-white bg-black/25 hover:bg-black/50 py-2 px-4"> 
                     Home 
                 </a>
-                <a href="/" className="text-sm font-semibold mr-2 font-semibold rounded shadow-inner bg-white/75 py-2 px-4"> 
+                <a href="/post" className="text-sm font-semibold mr-2 font-semibold rounded shadow-inner text-white bg-black/25 hover:bg-black/50 py-2 px-4"> 
                     Blog 
-                </a>
-                <a href="/" className="text-sm font-semibold mr-2 font-semibold rounded shadow-inner bg-white/75 py-2 px-4"> 
-                    Contact 
                 </a>
             </div>
             <span className="font-semibold text-lg text-gray-500 tracking-tight sm:hidden ml-auto">
