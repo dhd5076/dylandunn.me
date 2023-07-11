@@ -18,7 +18,7 @@ export default function Posts(props) {
     )
 }
 
-export async function getStaticProps(content) {
+export async function getServerSideProps(context) {
     const posts = await getPosts();
 
     return {

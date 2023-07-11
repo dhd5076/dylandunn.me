@@ -42,19 +42,8 @@ export default function Post(props) {
     </>
     )
 }
-
-export async function getStaticPaths() {
-    const posts = await getPosts()
-
-    const paths = posts.map((post) => ({
-      params: { slug: post.slug },
-    }))
   
-    return { paths, fallback: false }
-  }
-  
-  
-  export async function getStaticProps(context) {
+  export async function getServerSideProps(context) {
     const post = await getSinglePost(context.params.slug)
     const posts = await getPosts();
   
