@@ -7,7 +7,7 @@ export default function Post(props) {
     return (
     <>
         <div className="">
-            <img src={props.post.feature_image} className="object-cover h-96 w-full mt-16 bg-black/75"/>
+            <img src={props.post.feature_image} className="object-cover h-96 w-full mt-16 bg-black/75 brightness-50"/>
         </div>
         <div className="flex flex-col sm:flex-row">
             <div className="sm:w-5/6 bg-white/75 text-black">
@@ -21,7 +21,7 @@ export default function Post(props) {
 
                 </div>
             </div>
-            <div className="flex flex-col sm:w-1/4 sm:mb-8">
+            <div className="flex flex-col sm:w-1/4">
                 <div>
                     <h3 className="font-semibold m-4 text-2xl text-white"> Featured Posts</h3>
                 </div>

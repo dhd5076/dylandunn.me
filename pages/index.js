@@ -18,7 +18,7 @@ export default function Home(props) {
             <h1 className="mr-6"> Creating.</h1>
           </div>
           <p className="text-sm p-6 pt-0 w-full font-semibold">
-          Full-Time Cook, Expert Script Kiddie, and Sporadic Content Creator. I thrive on diverse and novel endeavors, constantly honing my skills, without claiming mastery in any one field. Stick around long enough, and you might witness the rare occasion when I bring a project to completion. For often, I find myself captivated by tangents that lead me into the realm of philosophical musings.
+          Full-Time Cook, Expert Script Kiddie, and Sporadic Content Creator. I thrive on diverse and novel endeavors, constantly honing my skills, without claiming mastery in any one field. Stick around long enough, and you might witness the rare occasion when I bring a project to completion. For often I find myself captivated by tangents that lead me into the realm of philosophical musings.
           </p>
         </div>
       </div>
@@ -41,7 +41,7 @@ export default function Home(props) {
             <p className="text-sm font-semibold mr-6"> During my workday, I serve as one of two cooks at La Bola, a small upscale bar nestled in downtown Rochester. While my body stays busy, my mind often roams free, inspiring late-night writings and weekend projects. I value the clear separation between my creative pursuits and financial dependence. This separation empowers me to create with unadulterated passion, unwavering curiosity, and a steadfast commitment to ethical principles. While my primary career lies in the culinary arts, I remain open to exploring alternative paths in life, eagerly awaiting the right opportunity to embrace new adventures. </p>
           </div>
         </div>
-        <div className="text-black bg-white/75 w-full sm:w-1/2 p-6">
+        <div className="text-black bg-white/75 p-6">
           <h1 className="text-2xl font-semibold mb-4"> Contact Me </h1>
           <span className="font-semibold"> Email: </span>
           <span> contact@dylandunn.me </span>
