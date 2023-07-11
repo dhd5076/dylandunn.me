@@ -42,14 +42,20 @@ export default function Home(props) {
           </div>
         </div>
         <div className="text-black bg-white/75 w-full sm:w-1/2 p-6">
-          <h1 className="text-2xl font-semibold mb-4"> Let's Talk!</h1>
+          <h1 className="text-2xl font-semibold mb-4"> Contact Me </h1>
+          <span className="font-semibold"> Email: </span>
+          <span> contact@dylandunn.me </span>
+          <br/>
+          <span className="font-semibold"> Phone: </span>
+          <span> 315-529-4032 </span>
+          {/*
           <form className="w-full">
             <input className="block w-1/2 mb-2 rounded py-2 px-4 inner-shadow bg-black/25 shadow-inner text-white font-semibold placeholder-gray-100" placeholder="Name"/>
             <input className="block w-1/2 rounded mb-2 py-2 px-4 inner-shadow bg-black/25 shadow-inner text-white font-semibold placeholder-gray-100" placeholder="Email"/>
             <textarea className="block w-full rounded mb-1 py-2 px-4 inner-shadow bg-black/25 shadow-inner text-white font-semibold placeholder-gray-100" placeholder="Type your message here..."/>
             <p className="text-right mt-0"> 0/300 Characters</p>
             <button className="ml-auto block bg-blue-500 px-2 py-1 rounded font-semibold text-white mt-2" disabled> Submit</button>
-          </form>
+          </form>  */}
         </div>
       </div>
     </>

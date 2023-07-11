@@ -17,7 +17,7 @@ export default function Post(props) {
                     <br/>
                     <span className="text-sm text-gray-800"> {DateTime.fromISO(props.post.published_at).toLocaleString(DateTime.DATE_MED)} </span>
                 </p>
-                <div className="space-y-4 text-black px-8" dangerouslySetInnerHTML={{ __html: props.post.html }}>
+                <div className="space-y-4 text-black px-8 pb-4" dangerouslySetInnerHTML={{ __html: props.post.html }}>
 
                 </div>
             </div>
