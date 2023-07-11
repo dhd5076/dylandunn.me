@@ -11,14 +11,14 @@ export default function Home(props) {
         <div className=" sm:max-w-sm sm:min-w-16 sm:h-full">
           <img src="/img/Head.png" className="object-cover sm:h-full bg-gradient-to-bl from-pink-500 to-indigo-500"/>
         </div>
-        <div className="text-white font-bold text-3xl bg-black/75">
+        <div className="text-white font-bold text-3xl bg-black/75 flex-auto">
           <div className="lg:flex lg:flex-wrap p-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-orange-500 inner-shadow">
             <h1 className="mr-6"> Coding.</h1>
             <h1 className="mr-6"> Cooking.</h1>
             <h1 className="mr-6"> Creating.</h1>
           </div>
           <p className="text-sm p-6 pt-0 w-full font-semibold">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.   
+          Full-Time Cook, Expert Script Kiddie, and Sporadic Content Creator. I thrive on diverse and novel endeavors, constantly honing my skills, without claiming mastery in any one field. Stick around long enough, and you might witness the rare occasion when I bring a project to completion. For often, I find myself captivated by tangents that lead me into the realm of philosophical musings.
           </p>
         </div>
       </div>
@@ -38,7 +38,7 @@ export default function Home(props) {
         <div className="text-white text-xs bg-black/75 overflow-hidden sm:w-1/3 p-6 flex-grow">
           <h1 className="text-2xl font-semibold mb-4"> About Me</h1>
           <div className="flex flex-wrap sm:flex-none">
-            <p className="text-sm font-semibold mr-6"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p className="text-sm font-semibold mr-6"> During my workday, I serve as one of two cooks at La Bola, a small upscale bar nestled in downtown Rochester. While my body stays busy, my mind often roams free, inspiring late-night writings and weekend projects. I value the clear separation between my creative pursuits and financial dependence. This separation empowers me to create with unadulterated passion, unwavering curiosity, and a steadfast commitment to ethical principles. While my primary career lies in the culinary arts, I remain open to exploring alternative paths in life, eagerly awaiting the right opportunity to embrace new adventures. </p>
           </div>
         </div>
         <div className="text-black bg-white/75 w-full sm:w-1/2 p-6">
