@@ -1,10 +1,11 @@
 import { faArrowRight, faArrowRightArrowLeft } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Image from "next/image"
-import { getPosts } from "../ghost"
+import { getPosts, useTitle } from "../ghost"
 import { DateTime } from "luxon"
 
 export default function Home(props) {
+  useTitle("Dylan Dunn | Home");
   return (
     <>
       <div className="sm:flex mt-16">
@@ -41,7 +42,7 @@ export default function Home(props) {
             <p className="text-sm font-semibold mr-6"> During my workday, I serve as one of two cooks at La Bola, a small upscale bar nestled in downtown Rochester. While my body stays busy, my mind often roams free, inspiring late-night writings and weekend projects. I value the clear separation between my creative pursuits and financial dependence. This separation empowers me to create with unadulterated passion, unwavering curiosity, and a steadfast commitment to ethical principles. While my primary career lies in the culinary arts, I remain open to exploring alternative paths in life, eagerly awaiting the right opportunity to embrace new adventures. </p>
           </div>
         </div>
-        <div className="text-black bg-white/75 p-6">
+        <div className="text-black bg-white/75 w-full sm:w-auto p-6">
           <h1 className="text-2xl font-semibold mb-4"> Contact Me </h1>
           <span className="font-semibold"> Email: </span>
           <span> contact@dylandunn.me </span>
@@ -62,7 +63,7 @@ export default function Home(props) {
   )
 }
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   const posts = await getPosts();
 
   return {

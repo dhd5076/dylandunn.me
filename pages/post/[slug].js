@@ -1,9 +1,10 @@
 
-import { getSinglePost, getPosts } from '../../ghost';
+import { getSinglePost, getPosts, useTitle } from '../../ghost';
 import { DateTime } from 'luxon';
 
 
 export default function Post(props) {
+    useTitle(props.post.title);
     return (
     <>
         <div className="">

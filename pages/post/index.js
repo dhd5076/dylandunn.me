@@ -1,7 +1,8 @@
 import { DateTime } from 'luxon';
-import { getPosts } from '../../ghost';
+import { getPosts, useTitle } from '../../ghost';
 
 export default function Posts(props) {
+    useTitle("Dylan Dunn | Blog");
     return (
     <div className="p-4 mt-16">
         <div className="grid grid-cols-3">
