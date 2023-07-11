@@ -1,8 +1,10 @@
 import { faArrowRight, faArrowRightArrowLeft } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Image from "next/image"
+import { getPosts } from "../ghost"
+import { DateTime } from "luxon"
 
-export default function Home() {
+export default function Home(props) {
   return (
     <>
       <div className="sm:flex mt-16">
@@ -23,19 +25,13 @@ export default function Home() {
       <div className="p-6 flex-grow">
         <h1 className="text-2xl font-semibold text-black mb-6"> Latest Posts</h1>
         <div className="sm:flex">
-          <a href="/post/asdasdasd" className="shadow-lg block m-2 rounded bg-white/50 hover:bg-white/60 sm:w-1/3 p-4">
-            <h1 className="font-semibold pb-2"> Post Title</h1>
-            <p className="text-xs font-normal leading-4"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-            <span className="text-gray-500 block mt-4 text-xs font-semibold"> 2 Days Ago</span>
-          </a>
-          <a href="/post/asdasdasd" className="shadow-lg block m-2 rounded bg-white/50 hover:bg-white/60 sm:w-1/3 p-4">
-            <h1 className="font-semibold pb-2"> Post Title</h1>
-            <p className="text-xs font-normal leading-4"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-          </a>
-          <a href="/post/asdasdasd" className="shadow-lg block m-2 rounded bg-white/50 hover:bg-white/60 sm:w-1/3 p-4">
-            <h1 className="font-semibold pb-2"> Post Title</h1>
-            <p className="text-xs font-normal leading-4"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-          </a>
+          {props.posts.slice(0,3).map(post => (
+            <a href={"/post/" + post.slug} className="relative shadow-lg block m-2 rounded bg-white/50 hover:bg-white/60 sm:w-1/3 p-4 pb-8">
+              <h1 className="font-semibold pb-2"> {post.title}</h1>
+              <p className="text-xs font-normal leading-4"> {post.excerpt} </p>
+              <div className="text-gray-500 absolute bottom-2 right-4 block text-xs font-semibold">{DateTime.fromISO(post.published_at).toLocaleString(DateTime.DATE_MED)}</div>
+            </a>
+          ))}
         </div>
       </div>
       <div className="flex flex-wrap justify-between">
@@ -58,4 +54,12 @@ export default function Home() {
       </div>
     </>
   )
+}
+
+export async function getStaticProps(context) {
+  const posts = await getPosts();
+
+  return {
+      props: { posts }
+  }
 }

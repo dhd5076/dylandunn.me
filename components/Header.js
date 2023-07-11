@@ -26,14 +26,6 @@ function Header (props){
             />
             </span>
         </div>
-        <div className="flex my-4">
-            <a href="/login" className="hidden sm:block bg-gray-500 text-white font-semibold ml-8 text-sm py-2 px-4 rounded mr-2">
-                Login
-            </a>
-            <div className="hidden sm:block bg-blue-500 text-white font-semibold text-sm py-2 px-4 rounded">
-                Sign Up
-            </div>
-        </div>
     </nav>
     </>
 )}
