@@ -7,10 +7,11 @@
         @apply text-2xl;
     }
     h2 {
-        @apply font-semibold;
+        @apply font-bold;
         @apply text-xl;
     }
     h3 {
+        @apply font-semibold;
         @apply text-lg;
     }
     h4 {
