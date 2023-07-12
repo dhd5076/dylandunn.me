@@ -5,26 +5,22 @@ import {
   faBars,
   faChevronDown
 } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 function Header (props){
     return (
     <>
-    <nav className="flex items-center sm:justify-between px-6 max-w-7xl w-full h-16 fixed shadow-2xl backdrop-blur-xl bg-white/75 z-50 shadow-2xl shadow-black/50">
-        <div className="flex my-4 sm:w-auto ml-0 items-center flex-shrink-0 text-white mx-auto justify-between w-full">
-            <span className="font-black text-2xl text-gray-900 mr-8 "><a href="/">Dylan Dunn</a></span>
-            <div className="hidden sm:block text-black/90">
-                <a href="/" className="text-sm font-semibold mr-2 font-semibold rounded shadow-inner text-white bg-black/25 hover:bg-black/50 py-2 px-4"> 
-                    Home 
-                </a>
-                <a href="/post" className="text-sm font-semibold mr-2 font-semibold rounded shadow-inner text-white bg-black/25 hover:bg-black/50 py-2 px-4"> 
+    <nav className="flex items-center px-6 max-w-7xl w-full h-16 fixed backdrop-blur-sm bg-white/50 z-50 shadow shadow-black/50">
+        <div className="flex my-4 ml-0 items-center text-white sm:justify-between">
+            <div className="font-black text-2xl text-gray-900 mr-8"><Link href="/">Dylan Dunn</Link></div>
+            <div className="ml-auto">
+                <Link href="/" className=" font-semibold mr-2 font-semibold text-white bg-black/75 rounded hover:text-black hover:bg-white/50 py-2 px-4"> 
+                    Home
+                </Link>
+                <Link href="/post" className=" font-semibold mr-2 font-semibold text-white bg-black/75 rounded hover:text-black hover:bg-white/50 py-2 px-4"> 
                     Blog 
-                </a>
+                </Link>
             </div>
-            <span className="font-semibold text-lg text-gray-500 tracking-tight sm:hidden ml-auto">
-            <FontAwesomeIcon
-                icon={faBars}
-            />
-            </span>
         </div>
     </nav>
     </>
