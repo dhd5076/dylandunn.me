@@ -17,14 +17,13 @@ export default function Post(props) {
     <>
         <div className="flex flex-col sm:flex-row mt-16">
             <div className="sm:w-5/6 bg-white/100 ">
-            <h1 className="text-3xl font-black font-roboto pl-8 mt-8"> {props.post.title}</h1>
+            <h1 className="text-3xl font-black font-roboto px-8 mt-8"> {props.post.title}</h1>
             <p className="px-8">
                 <span className="text-sm text-gray-500 font-mono block mt-2"> {DateTime.fromISO(props.post.published_at).toLocaleString(DateTime.DATE_MED)} </span>
                 <span className="block font-bold"> By Dylan Dunn</span>
             </p>
             <img src={props.post.feature_image} className="object-cover w-full my-8 bg-black/75"/>
             <div className="text-black px-8 pb-8 font-serif font-medium text-lg space-y-4 sm:w-3/4 mx-auto" dangerouslySetInnerHTML={{ __html: props.post.html }}>
-                {console.log(props.post.html)}
             </div>
         </div>
         <div className="flex flex-col sm:w-1/4">
