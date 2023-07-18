@@ -21,13 +21,24 @@ export default function Home(props) {
           <p className="text-sm p-6 pt-0 w-full font-semibold">
           Full-Time Cook, Expert Script Kiddie, and Sporadic Content Creator. I thrive on diverse and novel endeavors, constantly honing my skills, without claiming mastery in any one field. Stick around long enough, and you might witness the rare occasion when I bring a project to completion. For often I find myself captivated by tangents that lead me into the realm of philosophical musings.
           </p>
+          <div className="pb-6 sm:flex">
+            <Link className="text-lg m-6 hover:brightness-75 bg-white sm:w-1/3 text-black/75 p-2 rounded shadow block justify-center flex" href="https://github.com/dhd5076">
+              <span> Github </span> 
+            </Link>
+            <Link className="text-lg m-6 hover:brightness-75 bg-pink-500 sm:w-1/3 text-white p-2 rounded shadow block justify-center flex" href="/post">
+              <span> Blog </span> 
+            </Link>
+            <Link className="text-lg m-6 hover:brightness-75 bg-red-500 sm:w-1/3 text-white p-2 rounded shadow block justify-center flex" href="https://youtube.com/@Dylan_Dunn">
+              <span> Youtube</span> 
+            </Link>
+          </div>
         </div>
       </div>
       <div className="p-0 flex-grow bg-white/25">
         <h1 className="text-2xl font-semibold text-black mb-2 bg-white/75 p-6 shadow pl-6"> Latest Posts</h1>
         <div className="sm:flex p-0 m-0">
           {props.posts.slice(0,3).map(post => (
-           <Link href={"/post/" + post.slug} className="relative shadow block sm:rounded bg-white/75 hover:bg-white/50 pb-8 sm:m-6 mb-2 sm:w-1/3">
+           <Link href={"/post/" + post.slug} className="relative shadow block sm:rounded bg-white/75 hover:bg-white/50 pb-8 m-6 sm:w-1/3">
             <h1 className="font-semibold text-xl pb-2 mb-2 p-4"> {post.title}</h1>
             <img className="w-full mb-4 sm:px-4" src={post.feature_image}></img>
             <p className="text-sm font-normal font-serif mb-2 line-clamp-5 px-4"> {post.excerpt} </p>
