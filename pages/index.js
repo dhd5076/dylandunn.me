@@ -11,8 +11,8 @@ export default function Home(props) {
   return (
     <>
       <div className="sm:flex mt-16">
-        <img src="/img/Head.png" className="object-cover sm:h-full bg-gradient-to-bl from-pink-500 to-indigo-500 w-full"/>
-        <div className="text-white font-bold text-3xl bg-black/75 flex-auto">
+        <img src="/img/Head.png" className="object-cover sm:h-full bg-gradient-to-bl from-pink-500 to-indigo-500 sm:w-1/3 box-border"/>
+        <div className="text-white font-bold text-3xl bg-black/75 flex-auto w-2/3">
           <div className="lg:flex lg:flex-wrap p-6 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-orange-500 inner-shadow">
             <h1 className="mr-6"> Coding.</h1>
             <h1 className="mr-6"> Cooking.</h1>
