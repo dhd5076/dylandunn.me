@@ -4,7 +4,6 @@ import '../styles/globals.css';
 import "@fortawesome/fontawesome-svg-core/styles.css"; 
 import "prismjs/themes/prism-tomorrow.css"
 import "prismjs/plugins/line-numbers/prism-line-numbers.css"
-import "prismjs"
 
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
