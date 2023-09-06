@@ -8,7 +8,9 @@
     }
     h2 {
         @apply font-bold;
-        @apply text-xl;
+        @apply text-2xl;
+        @apply m-0;
+        @apply pt-8;
     }
     h3 {
         @apply font-semibold;
@@ -20,6 +22,10 @@
     h5 {
         @apply text-xs;
     }
-  }
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.kg-btn {
+    @apply bg-blue-500 text-white p-4 inline-block mt-4 font-semibold rounded;
+}

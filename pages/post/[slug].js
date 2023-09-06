@@ -23,7 +23,7 @@ export default function Post(props) {
                     <span className="block font-bold"> By Dylan Dunn</span>
                 </p>
                 <img src={props.post.feature_image} className="object-cover w-full my-8 bg-black/75"/>
-                <div className="text-black px-8 pb-8 font-serif font-medium text-lg space-y-4 mx-auto sm:max-w-[720px]" dangerouslySetInnerHTML={{ __html: props.post.html }}>
+                <div className="text-black px-8 pb-8 font-serif space-y-4 mx-auto sm:max-w-[720px]" dangerouslySetInnerHTML={{ __html: props.post.html }}>
                 </div>
             </div>
             <div className="flex flex-col sm:w-full bg-black/50">
